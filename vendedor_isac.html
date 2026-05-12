@@ -84,12 +84,18 @@ section.cuadro{
   }
     .a {
     grid-area: a;
-    background-color: red;
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100px 150px;
+    grid-template-areas: 
+    "i d"
+    "i n";
   }
     .b {
     grid-area: b;
-    background-color: orange;
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
   }
   @media (max-width: 700px) {
