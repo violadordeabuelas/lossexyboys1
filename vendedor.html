@@ -84,7 +84,7 @@ section.cuadro{
   }
     .a {
     grid-area: a;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlpnkAOhyyVJI4K3VLwlcMqdUTS01R-fbeA&s);
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 6px;
@@ -114,7 +114,7 @@ section.cuadro{
 }
     .b {
     grid-area: b;
-    background-color: orange;
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
   }
   @media (max-width: 700px) {
@@ -248,49 +248,49 @@ section.cuadro{
             <p style="font-size: 2em; color: black;">Fernando Camargo encargado de la venta y desarrollo de los productos para que cumplan todas las medidas de sanidad necesarias, entre las tareas y verificavciones que el encargado debe realizar estan:
 </p>
         </div>
-        <div class="b">
+<div class="b">
             <table>
                 <tr>
-                    <th>USUARIO</th>
-                    <th>CORREO</th>
-                    <th>CONTRAÑESA</th>
-                    <th>REPORTES</th>
-                    <th>TIPO</th>
+                    <th>Clientes</th>
+                    <th>Productos</th>
+                    <th>Gestion de pedidos</th>
+                    <th>Registro de venata</th>
+                    <th>Precio de todo el pedido</th>
                 </tr>
                 <tr>
-                    <td><button class="pan" id="pan">Pantera</button></td>
-                    <td>isacCaste45@gmail.com</td>
-                    <td>******</td>
-                    <td>dejer ver</td>
-                    <td>administrador</td>
+                    <td><button class="pan" id="pan">Fabricio</button></td>
+                    <td>Jugo de horvhta (baso de Bambu)</td>
+                    <td>En proceso de producccion</td>
+                    <td>Pendiente</td>
+                    <td>5 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="char" id="char">C Char</button></td>
-                    <td>leonelVilla34@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar botones</td>
-                    <td>lider</td>
+                    <td><button class="char" id="char">Jesenia</button></td>
+                    <td>Agua de jamaica (en Tutuma)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Realizado</td>
+                    <td>3 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="joqui" id="joqui">C joqui</button></td>
-                    <td>Camargogarnica@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar productos</td>
-                    <td>probador</td>
+                    <td><button class="joqui" id="joqui">Fabiana</button></td>
+                    <td>Moconchinchi (baso de Bambu)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Pendiente</td>
+                    <td>5 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="bomm" id="bomm">C Bomm</button></td>
-                    <td>hazielduzan@gmail.com</td>
-                    <td>******</td>
-                    <td>hacer CRUD</td>
-                    <td>Data base</td>
+                    <td><button class="bomm" id="bomm">Andre</button></td>
+                    <td>Limonada (en Tutuma)</td>
+                    <td>En proceso de produccion</td>
+                    <td>Pendiente</td>
+                    <td>3 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="panoch" id="panoch">panoch</button></td>
-                    <td>mateosalazar@gmail.com</td>
-                    <td>******</td>
-                    <td>Hacer Pagina</td>
-                    <td>pagina</td>
+                    <td><button class="panoch" id="panoch">Agustin</button></td>
+                    <td>Jugo de coco (baso de Bambu)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Realizado</td>
+                    <td>5 Bs</td>
                 </tr>
             </table>
         </div>
@@ -298,6 +298,8 @@ section.cuadro{
             <h2>Pantera</h2><br>
             <p>Nombre: Isac Castellon</p>
             <p>Correo: isacCaste45@gmail.com</p>
+            <p>Telefono: 54980909</p>
+            <p>Direccion: Avenida America</p>
             <form  method="dialog">
                 <button class="pan">cerrar</button>
             </form>
@@ -353,23 +355,23 @@ section.cuadro{
 
         var modal = document.querySelector(".modal");
         pan.addEventListener("click", function() {
-            modal.innerHTML = "<h2>Pantera</h2><p>Nombre: Isac Castellon</p><p>Correo: isacCaste45@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>Fabricio</h2><p>Nombre: Fabricio Calero</p><p>Correo: fricac@gmail.com</p><p>Telefono: 54980909</p><p>Direccion: Avenida America</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         char.addEventListener("click", function() {
-            modal.innerHTML = "<h2>C Char</h2><p>Nombre: Leonel Villarrouel</p><p>Correo: leonelVilla34@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>C Jesenia</h2><p>Nombre: Jesenia Copa</p><p>Correo: Jesscop34@gmail.com</p><p>Telefono: 98679376</p><p>Direccion: Avenida Libertador</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         joqui.addEventListener("click", function() {
-            modal.innerHTML = "<h2>C joqui</h2><p>Nombre: Fernando Camargo</p><p>Correo: Camargogarnica@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2> Fabiana</h2><p>Nombre: Fabiana Herrera</p><p>Correo: Fabiherreara@gmail.com</p><p>Telefono: 43251636</p><p>Direccion: Avenida Beingjin</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         bomm.addEventListener("click", function() {
-            modal.innerHTML = "<h2>C Bomm</h2><p>Nombre: Alexander MAlaga</p><p>Correo: hazielduzan@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2> Andre</h2><p>Nombre: Andre Aramayo</p><p>Correo: bradpid@gmail.com</p><p>Telefono: 78436245</p><p>Direccion: Avenida Villazon</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         panoch.addEventListener("click", function() {
-            modal.innerHTML = "<h2>panoch</h2><p>Nombre: Mateo Salazar</p><p>Correo: mateosalazar@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>Agustin</h2><p>Nombre: Agustin Veizaga</p><p>Correo: Agusmichi@gmail.com</p><p>Telefono: 63894234</p><p>Direccion: Avenida Balco Galindo</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
     </script>
