@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #111;
+    color: #fff;
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+  }
+  header img.logo {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s ease;
+  }
+  header img.logo:hover {
+    transform: scale(1.1);
+  }
+  nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #5eff6ce5;
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5eff6ce5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+section.cuadro{
+    width: 1500px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 250px 500px;
+    grid-template-areas:
+      "a"
+      "c"
+      "b";
+    gap: 10px;
+  }
+    .a {
+    grid-area: a;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWlpnkAOhyyVJI4K3VLwlcMqdUTS01R-fbeA&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+  }
+  .pe{
+   display: flex;
+    justify-content: center; 
+    align-items: center;
+     height: 400px;
+     font-size: 7em;
+     color: #fff
+  }
+  .c{
+    grid-area: c;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.c img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+    .b {
+    grid-area: b;
+    background-color: orange;
+    border-radius: 6px;
+  }
+  @media (max-width: 700px) {
+    section.cuadro {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b";
+    }
+  }
+  table{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+  }
+  th{
+    border: 1px solid #000;
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+  }
+  td{
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+  }
+  .modal {
+    inset: 0;
+    margin: auto;
+  }
+  .botoncito { 
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  .pan, .char, .joqui, .bomm, .panoch {
+    padding: 10px 20px;
+  }
+    footer {
+    background: #111;
+    color: #ccc;
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+  .goldaabajo {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  footer h4 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer li {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  footer a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #fff;
+  }
+  .redes-musculoso a {
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 18px;
+  }
+  .subscribe {
+    display: grid;
+    gap: 10px;
+  }
+  .subscribe input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    width: 80%;
+  }
+  .subscribe button {
+    background: #3cff46;
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .subscribe button:hover {
+    background: #3cffce;
+  }
+    </style>
+</head>
+<body>
+    <header>
+  <a href="pagina_principal.html">
+  <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="productos.html">NUESTROS JUGOS</a></li>
+      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
+      <li><a href="combos.html">COMBOS</a></li>
+      <li><a href="quienes.html">QUIENES SOMOS</a></li>
+      <li><a href="telefonos .html">TELEFONOS</a></li>
+      <li class="dropdown">
+  <a href="productos.html">MÁS</a>
+  <div class="dropdown-content">
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="registro.html">Registrarse</a>
+  </div>
+</li>
+    </ul>
+  </nav>
+</header>
+    <section class="cuadro">
+        <div class="a">
+            <h1 class="pe">vendedor</h1>
+
+        </div>
+        <div class="c">
+            <img src="https://media.istockphoto.com/id/125141451/es/foto/nerd-estudiantes-que-flor.jpg?s=612x612&w=0&k=20&c=iPCgIS0ZNeomJUTEevQRAYgdXdn86z7VrYShYc4lRW8=" alt="fernando">
+            <h1 style="font-size: 4em; color: #4CAF50;">datos del vendedor</h1>
+            <p style="font-size: 2em; color: black;">Fernando Camargo encargado de la venta y desarrollo de los productos para que cumplan todas las medidas de sanidad necesarias, entre las tareas y verificavciones que el encargado debe realizar estan:
+</p>
+        </div>
+        <div class="b">
+            <table>
+                <tr>
+                    <th>USUARIO</th>
+                    <th>CORREO</th>
+                    <th>CONTRAÑESA</th>
+                    <th>REPORTES</th>
+                    <th>TIPO</th>
+                </tr>
+                <tr>
+                    <td><button class="pan" id="pan">Pantera</button></td>
+                    <td>isacCaste45@gmail.com</td>
+                    <td>******</td>
+                    <td>dejer ver</td>
+                    <td>administrador</td>
+                </tr>
+                <tr>
+                    <td><button class="char" id="char">C Char</button></td>
+                    <td>leonelVilla34@gmail.com</td>
+                    <td>******</td>
+                    <td>cambiar botones</td>
+                    <td>lider</td>
+                </tr>
+                <tr>
+                    <td><button class="joqui" id="joqui">C joqui</button></td>
+                    <td>Camargogarnica@gmail.com</td>
+                    <td>******</td>
+                    <td>cambiar productos</td>
+                    <td>probador</td>
+                </tr>
+                <tr>
+                    <td><button class="bomm" id="bomm">C Bomm</button></td>
+                    <td>hazielduzan@gmail.com</td>
+                    <td>******</td>
+                    <td>hacer CRUD</td>
+                    <td>Data base</td>
+                </tr>
+                <tr>
+                    <td><button class="panoch" id="panoch">panoch</button></td>
+                    <td>mateosalazar@gmail.com</td>
+                    <td>******</td>
+                    <td>Hacer Pagina</td>
+                    <td>pagina</td>
+                </tr>
+            </table>
+        </div>
+        <dialog class="modal">
+            <h2>Pantera</h2><br>
+            <p>Nombre: Isac Castellon</p>
+            <p>Correo: isacCaste45@gmail.com</p>
+            <form  method="dialog">
+                <button class="pan">cerrar</button>
+            </form>
+        </dialog>
+    </section>
+    <footer>
+  <div class="goldaabajo">
+    <div>
+      <h4>NOSOTROS</h4>
+      <ul>
+        <li><a href="#">Nuestra historia</a></li>
+        <li><a href="#">Nuestra filosofía</a></li>
+        <li><a href="#">Responsabilidad social</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>TIENDA</h4>
+      <ul>
+        <li><a href="#">Programa 7 días</a></li>
+        <li><a href="#">Dieta líquida de 1 día</a></li>
+        <li><a href="#">Otros productos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>AYUDA</h4>
+      <ul>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+      </ul>
+    </div>
+    <div class="subscribe">
+      <h4>SUSCRÍBETE</h4>
+      <p>Recibe nuestras últimas noticias</p>
+      <input type="email" placeholder="Tu email...">
+      <button>OK</button>
+      <div class="redes-musculoso">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>  
+        <a href="#">📸</a>
+        <a href="#">📍</a>  
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        var pan = document.getElementById("pan");
+        var char = document.getElementById("char");
+        var joqui = document.getElementById("joqui");
+        var bomm = document.getElementById("bomm");
+        var panoch = document.getElementById("panoch");
+
+        var modal = document.querySelector(".modal");
+        pan.addEventListener("click", function() {
+            modal.innerHTML = "<h2>Pantera</h2><p>Nombre: Isac Castellon</p><p>Correo: isacCaste45@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.showModal();
+        });
+        char.addEventListener("click", function() {
+            modal.innerHTML = "<h2>C Char</h2><p>Nombre: Leonel Villarrouel</p><p>Correo: leonelVilla34@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.showModal();
+        });
+        joqui.addEventListener("click", function() {
+            modal.innerHTML = "<h2>C joqui</h2><p>Nombre: Fernando Camargo</p><p>Correo: Camargogarnica@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.showModal();
+        });
+        bomm.addEventListener("click", function() {
+            modal.innerHTML = "<h2>C Bomm</h2><p>Nombre: Alexander MAlaga</p><p>Correo: hazielduzan@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.showModal();
+        });
+        panoch.addEventListener("click", function() {
+            modal.innerHTML = "<h2>panoch</h2><p>Nombre: Mateo Salazar</p><p>Correo: mateosalazar@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.showModal();
+        });
+    </script>
+</body>
+</html>
