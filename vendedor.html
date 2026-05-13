@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,11 +13,10 @@
   header {
     background: #111;
     color: #fff;
-    padding: 500px 40px;
+    padding: 12px 40px;
     display: grid;
     grid-template-columns: auto 1fr;
-
-
+    align-items: center;
   }
   header img.logo {
     height: 100px;
@@ -27,10 +26,10 @@
   header img.logo:hover {
     transform: scale(1.1);
   }
-
   nav ul {
     display: grid;
     grid-auto-flow: column;
+    justify-content: center;
     list-style: none;
     gap: 20px;
   }
@@ -202,14 +201,13 @@ section.cuadro{
 </head>
 <body>
     <header>
-      
   <a href="pagina_principal.html">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
-      <li><a href="productos.html">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
+      <li><a href="admin.html">Nuestro Admin</a></li>
+      <li><a href="vendedor.html">Nuestro Vendedor</a></li>
       <li><a href="combos.html">COMBOS</a></li>
       <li><a href="quienes.html">QUIENES SOMOS</a></li>
       <li><a href="telefonos .html">TELEFONOS</a></li>
@@ -222,9 +220,9 @@ section.cuadro{
 </li>
     </ul>
   </nav>
-  <div>vendedor</div>
 </header>
     <section class="cuadro">
+        
         <div class="c">
             <img src="fer.png" alt="fernando" class="par">
             <h1 style="font-size: 4em; color: #4CAF50;">Datos del vendedor</h1>
