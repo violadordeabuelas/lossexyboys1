@@ -279,6 +279,26 @@ section.cuadro{
           <nav class="info">
           
             <button class="bot">AÑADIR</button>
+            <dialog>
+              <form action="añadir.php" method="post" class="use">
+                  <label for="usuario">Usuario:</label>
+                  <input type="text" id="usuario" name="usuario" required><br>
+
+                  <label for=""></label>
+
+                  <label for="correo">Correo:</label>
+                  <input type="email" id="correo" name="correo" required><br>
+
+                  <label for="contraseña">Contraseña:</label>
+                  <input type="password" id="contraseña" name="contraseña" required><br>
+
+                  <label for="tipo">Tipo:</label>
+                  <input type="text" id="tipo" name="tipo" required><br>
+    
+                <input type="submit" value="Registrar" class="bot">
+    
+              </form>
+            </dialog>
             <button class="bot">EDITAR</button>
             <button class="bot">ELIMINAR</button>
           </nav>
