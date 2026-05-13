@@ -11,7 +11,7 @@
     else{
         echo "si te conectaste ". "<br>";
     }
-    $sql= "SELECT * FROM admin1.admin";
+    $sql= "SELECT * FROM adminis";
     $query = $conn->query($sql);
 
 ?>
@@ -88,7 +88,7 @@
   display: block;
 }
 section.cuadro{
-    width: 1500px;
+    width: 99%;
     margin: 10px;
     display: grid;
     grid-template-columns: 100%;
@@ -96,16 +96,22 @@ section.cuadro{
     grid-template-areas:
       "a"
       "b";
-    gap: 10px;
+      gap: 10px;
   }
     .a {
     grid-area: a;
-    background-color: red;
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100px 150px;
+    grid-template-areas: 
+    "i d"
+    "i n";
   }
     .b {
     grid-area: b;
-    background-color: orange;
+    background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
   }
   @media (max-width: 700px) {
@@ -135,6 +141,10 @@ section.cuadro{
   .modal {
     inset: 0;
     margin: auto;
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
   }
   .botoncito { 
   padding: 10px 20px;
@@ -143,9 +153,13 @@ section.cuadro{
   border: 1px solid #4CAF50;
   border-radius: 5px;
   cursor: pointer;
+  margin: 20px ;
+  
   }
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
+    background-color: transparent;
+    border: transparent;
   }
     footer {
     background: #111;
@@ -153,6 +167,35 @@ section.cuadro{
     padding: 40px 20px;
     margin-top: 40px;
   }
+  .isac{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+  }
+  .d{
+    font-size: 100px;
+    grid-area: d;
+  }
+  .bot{
+    padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px ;
+  font-size: 50px;
+  }
+  .info{
+    grid-area: n;
+    display: flex;
+    display:inline-block;
+    justify-content: center;
+    top: 200px;
+    left: 200px;
+  }
+
   .goldaabajo {
     max-width: 1200px;
     margin: auto;
@@ -229,7 +272,18 @@ section.cuadro{
   </nav>
 </header>
     <section class="cuadro">
-        <div class="a">a</div>
+        <div class="a"><img src="Isac.png" alt="pep " class="isac" >
+          <nav>
+            <h1 class="d">ADMINISTRADOR</h1>
+          </nav>
+          <nav class="info">
+          
+            <button class="bot">AÑADIR</button>
+            <button class="bot">EDITAR</button>
+            <button class="bot">ELIMINAR</button>
+          </nav>
+          
+        </div>
         <div class="b">
             <table>
                 <tr>
@@ -242,12 +296,23 @@ section.cuadro{
                 <tbody>
                 <?php while($row = mysqli_fetch_assoc($query)):?>
                 <tr>
-                    <td><button><?php echo $row['id']; ?></button></td>
                     <td><button class="pan" id="pan"><?php echo $row['usuario']; ?></button></td>
                     <td><?php echo $row['correo']; ?></td>
                     <td><?php echo $row['contraseña']; ?></td>
+                    <td><?php echo $row['reportes']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                 </tr>
+                <dialog class="modal">
+            <center><h2><?php echo $row['usuario']?></h2><br></center>
+            <p>Nombre:<?php echo $row['nombre']?></p>
+            <p>Telefono:<?php echo $row['tele']?></p>
+            <p>Fecha de nacimiento: <?php echo $row['naci']?></p>
+            <p>Correo: <?php echo $row['correo']?></p>
+            <p>Direccion:<?php echo $row['dire']?></p>
+            <form  method='dialog'>
+                <center><button class='botoncito'>cerrar</button></center>
+            </form>
+        </dialog>
                 <?php endwhile;?>
                 </tbody>
             </table>
@@ -293,6 +358,14 @@ section.cuadro{
     </div>
   </div>
 </footer>
+<script>
+        var pan = document.getElementById("pan");
+
+        var modal = document.querySelector(".modal");
+        pan.addEventListener("click", function() {
+            modal.showModal();
+        });
+    </script>
 
 </body>
 </html>
