@@ -146,6 +146,14 @@ section.cuadro{
     border: none;
     border-radius: 10px;
   }
+  .modaluse {
+    inset: 0;
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+  }
   .botoncito { 
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -176,6 +184,25 @@ section.cuadro{
   .d{
     font-size: 100px;
     grid-area: d;
+  }
+  .use {
+  background-color: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  }
+  .use-label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  }
+  .use-input {
+  width: 99%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
   }
   .bot{
     padding: 10px 20px;
@@ -278,29 +305,42 @@ section.cuadro{
           </nav>
           <nav class="info">
           
-            <button class="bot">AÑADIR</button>
-            <dialog>
-              <form action="añadir.php" method="post" class="use">
-                  <label for="usuario">Usuario:</label>
-                  <input type="text" id="usuario" name="usuario" required><br>
+            <button class="bot" id="añadir">AÑADIR</button>
+            <dialog id="modalAñadir" class="modaluse">
+              <form action="insertar_admin.php" method="post" class="use">
+                  <label for="usuario" class="use-label">Usuario:</label>
+                  <input type="text" class="use-input" id="usuario" name="usuario" required><br>
 
-                  <label for=""></label>
+                  <label for="nombre" class="use-label">Nombre:</label>
+                  <input type="text" class="use-input" id="nombre" name="nombre" required><br>
 
-                  <label for="correo">Correo:</label>
-                  <input type="email" id="correo" name="correo" required><br>
+                  <label for="tele" class="use-label">Teléfono:</label>
+                  <input type="text" class="use-input" id="tele" name="tele" required><br>
 
-                  <label for="contraseña">Contraseña:</label>
-                  <input type="password" id="contraseña" name="contraseña" required><br>
+                  <label for="naci" class="use-label">Fecha de nacimiento:</label>
+                  <input type="date" class="use-input" id="naci" name="naci" required><br>
 
-                  <label for="tipo">Tipo:</label>
-                  <input type="text" id="tipo" name="tipo" required><br>
+                  <label for="correo" class="use-label">Correo:</label>
+                  <input type="email" class="use-input" id="correo" name="correo" required><br>
+
+                  <label for="contraseña" class="use-label">Contraseña:</label>
+                  <input type="password" class="use-input" id="contraseña" name="contraseña" required><br>
+
+                  <label for="reportes" class="use-label">Reportes:</label>
+                  <input type="text" class="use-input" id="reportes" name="reportes" required><br>
+
+                  <label for="tipo" class="use-label">Tipo:</label>
+                  <input type="text" class="use-input" id="tipo" name="tipo" required><br>
+
+                  <label for="dire" class="use-label">Dirección:</label>
+                  <input type="text" class="use-input" id="dire" name="dire" required><br>
     
                 <input type="submit" value="Registrar" class="bot">
     
               </form>
             </dialog>
-            <button class="bot">EDITAR</button>
-            <button class="bot">ELIMINAR</button>
+            <button class="bot" id="editar">EDITAR</button>
+            <button class="bot" id="eliminar">ELIMINAR</button>
           </nav>
           
         </div>
@@ -314,26 +354,26 @@ section.cuadro{
                     <th>TIPO</th>
                 </tr>
                 <tbody>
-                <?php while($row = mysqli_fetch_assoc($query)):?>
-                <tr>
-                    <td><button class="pan" id="pan"><?php echo $row['usuario']; ?></button></td>
+                <?php $i = 0; while($row = mysqli_fetch_assoc($query)):?>
+                  <tr>
+                    <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['usuario']; ?></button></td>
                     <td><?php echo $row['correo']; ?></td>
                     <td><?php echo $row['contraseña']; ?></td>
                     <td><?php echo $row['reportes']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
-                </tr>
-                <dialog class="modal">
-            <center><h2><?php echo $row['usuario']?></h2><br></center>
-            <p>Nombre:<?php echo $row['nombre']?></p>
-            <p>Telefono:<?php echo $row['tele']?></p>
-            <p>Fecha de nacimiento: <?php echo $row['naci']?></p>
-            <p>Correo: <?php echo $row['correo']?></p>
-            <p>Direccion:<?php echo $row['dire']?></p>
-            <form  method='dialog'>
-                <center><button class='botoncito'>cerrar</button></center>
-            </form>
-        </dialog>
-                <?php endwhile;?>
+                  </tr>
+                  <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
+                    <center><h2><?php echo $row['usuario']?></h2><br></center>
+                    <p>Nombre:<?php echo $row['nombre']?></p>
+                    <p>Telefono:<?php echo $row['tele']?></p>
+                    <p>Fecha de nacimiento: <?php echo $row['naci']?></p>
+                    <p>Correo: <?php echo $row['correo']?></p>
+                    <p>Direccion:<?php echo $row['dire']?></p>
+                    <form  method='dialog'>
+                      <center><button class='botoncito'>cerrar</button></center>
+                    </form>
+                  </dialog>
+                <?php $i++; endwhile;?>
                 </tbody>
             </table>
         </div>
@@ -379,11 +419,21 @@ section.cuadro{
   </div>
 </footer>
 <script>
-        var pan = document.getElementById("pan");
+        var boton = document.querySelectorAll(".btn-modal");
+        boton.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var index = button.getAttribute("data-index");
+                var modal = document.querySelector(".modaltodo[data-index='" + index + "']");
+                if (modal) {
+                    modal.showModal();
+                }
+            });
+        });
 
-        var modal = document.querySelector(".modal");
-        pan.addEventListener("click", function() {
-            modal.showModal();
+        var aña = document.getElementById("añadir");
+        var modalAñadir = document.getElementById("modalAñadir");
+        aña.addEventListener("click", function() {
+            modalAñadir.showModal();
         });
     </script>
 
