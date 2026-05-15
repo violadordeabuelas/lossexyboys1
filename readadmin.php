@@ -164,6 +164,22 @@ section.cuadro{
   margin: 20px ;
   
   }
+  .edi {
+    padding: 6px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    fornt-weight: bold;
+  }
+  .eli {
+    padding: 6px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    fornt-weight: bold;
+  }
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
     background-color: transparent;
@@ -339,8 +355,7 @@ section.cuadro{
     
               </form>
             </dialog>
-            <button class="bot" id="editar">EDITAR</button>
-            <button class="bot" id="eliminar">ELIMINAR</button>
+            
           </nav>
           
         </div>
@@ -361,6 +376,10 @@ section.cuadro{
                     <td><?php echo $row['contraseña']; ?></td>
                     <td><?php echo $row['reportes']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
+                    <td>
+                      <a class="edi" href="editar_admin.php?id=<?php echo $row['id']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['id']; ?>">ELIMINAR</a>
+                    </td>
                   </tr>
                   <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
                     <center><h2><?php echo $row['usuario']?></h2><br></center>
