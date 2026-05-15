@@ -331,7 +331,8 @@ section.cuadro{
                   <input type="text" class="use-input" id="nombre" name="nombre" required><br>
 
                   <label for="tele" class="use-label">Teléfono:</label>
-                  <input type="text" class="use-input" id="tele" name="tele" required><br>
+                  <input type="n
+                  um" class="use-input" id="tele" name="tele" required><br>
 
                   <label for="naci" class="use-label">Fecha de nacimiento:</label>
                   <input type="date" class="use-input" id="naci" name="naci" required><br>

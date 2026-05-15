@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `admin1`.`adminis` (
   `naci` DATE NULL,
   `nombre` VARCHAR(45) NULL,
   `dire` VARCHAR(45) NULL,
-  `tele` VARCHAR(45) NULL,
+  `tele` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
