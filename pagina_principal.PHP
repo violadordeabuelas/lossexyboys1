@@ -72,6 +72,32 @@ nav a{
 nav a:hover{
     color:#5eff6ce5;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5eff6ce5;
+}
 
 .contenido{
     width:100%;
@@ -298,19 +324,37 @@ footer a:hover{
             Code Craft
         </div>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Categorías</a>
-            <a href="#">Contacto</a>
-            <a href="#">Jugos</a>
+            <a href="productos.php">Inicio</a>
+            <a href="horarioatencion.php">Categorías</a>
+            <a href="quienes.php">Contacto</a>
+            <a href="telefonos .php">Jugos</a>
+            <section class="dropdown">
+                <a href="#">MAS</a>
+                <div class="dropdown-content">
+                    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
+                    <a href="registro.php">Registrarse</a>
+                    <a href="creacion.php">Creacion de vasos</a>
+                    <a href="creacionjugos.php">Creacion de jugos</a>
+                </div>
+
+            </section>
         </nav>
     </header>
     <div class="contenido">
         <h1>BOOMBLE</h1>
         <div class="botones">
-            <a href="#">INICIO</a>
-            <a href="#">CATEGORÍAS</a>
-            <a href="#">CONTACTO</a>
-            <a href="#">JUGOS</a>
+            <a href="productos.php">Inicio</a>
+            <a href="horarioatencion.php">Categorías</a>
+            <a href="quienes.php">Contacto</a>
+            <a href="telefonos .php">Jugos</a>
+            <section class="dropdown">
+                <a href="#">MAS</a>
+                <div class="dropdown-content">
+                    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
+                    <a href="registro.php">Registrarse</a>
+                    <a href="creacion.php">Creacion de vasos</a>
+                    <a href="creacionjugos.php">Creacion de jugos</a>
+                </div>
         </div>
 
     </div>
