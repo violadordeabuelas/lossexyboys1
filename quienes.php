@@ -231,7 +231,6 @@ font-family: sans-serif;
     <ul>
       <li><a href="productos.php">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="combos.php">COMBOS</a></li>
       <li><a href="quienes.php">QUIENES SOMOS</a></li>
       <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
