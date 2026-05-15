@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Video</title>
+<title>Boomble</title>
 
 <style>
 *{
@@ -291,10 +291,10 @@ footer a:hover{
             Code Craft
         </div>
         <nav>
-            <LI><a href="productos.php">PRODUCTOS</a></LI>
-            <li><a href="horarioatencion.php">HORARIO</a></li>
-            <a href="quienes.php">QUIENES</a>
-            <a href="telefonos .php">TELEFONOS</a>
+        <a href="productos.php">PRODUCTOS</a>
+        <a href="horarioatencion.php">HORARIO</a>
+        <a href="quienes.php">QUIENES</a>
+        <a href="telefonos .php">TELEFONOS</a>
             <section class="dropdown">
                 <a href="#">MAS</a>
                 <div class="dropdown-content">
