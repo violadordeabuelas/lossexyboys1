@@ -251,25 +251,19 @@ if ($resultado->num_rows > 0) {
         echo "<b>Dirección:</b> ".$fila['direccion']."<br>";
         echo "<b>CI:</b> ".$fila['CI']."<br>";
         echo "<b>Comentarios:</b> ".$fila['comentarios']."<br><br>";
-
         $CI = $fila['CI'];
-
         echo "<div class='actions'>";
         echo "<a href='update_registro.php?CI=$CI'><button>Editar</button></a>";
         echo "<a href='delete_registro.php?CI=$CI'><button>Eliminar</button></a>";
         echo "</div>";
-
         echo "</div>";
     }
-
 } else {
     echo "<p>No hay registros disponibles.</p>";
 }
 ?>
-
 </div>
 </main>
-
 <footer>
   <div class="goldaabajo">
     <div>
@@ -296,7 +290,6 @@ if ($resultado->num_rows > 0) {
         <li><a href="#">Términos y condiciones</a></li>
       </ul>
     </div>
-
     <div class="subscribe">
       <h4>SUSCRÍBETE</h4>
       <p>Recibe nuestras últimas noticias</p>
