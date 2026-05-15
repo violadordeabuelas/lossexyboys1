@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Video</title>
+<title>Boomble</title>
 
 <style>
 *{
@@ -50,7 +50,6 @@ header{
     left:0;
 
     padding:25px 50px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -96,18 +95,16 @@ nav a:hover{
 
 .dropdown-content a:hover {
   background-color: #333;
-  color: #5eff6ce5;
+    color: #5eff6ce5;
 }
 
 .contenido{
     width:100%;
     height:100vh;
-
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
     text-align:center;
     color:white;
 }
@@ -116,7 +113,6 @@ nav a:hover{
     font-size:100px;
     letter-spacing:5px;
     margin-bottom:30px;
-
     text-shadow:0 0 15px rgba(0,0,0,0.7);
 }
 
@@ -129,12 +125,9 @@ nav a:hover{
 .botones a{
     color:white;
     text-decoration:none;
-
     font-size:35px;
     font-weight:bold;
-
     border-bottom:3px solid white;
-
     transition:0.3s;
 }
 
@@ -147,44 +140,30 @@ nav a:hover{
 
 .sections{
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit, minmax(320px,1fr));
-
     gap:30px;
-
     max-width:1200px;
-
     margin:60px auto;
-
     padding:20px;
 }
 
 .reinaduende{
     background:#fafafa;
-
     border-radius:10px;
-
     padding:20px;
-
     text-align:center;
-
     box-shadow:0 4px 15px rgba(0,0,0,0.05);
-
     display:grid;
     gap:10px;
-
     overflow:hidden;
 }
 
 .reinaduende img{
     width:100%;
     height:400px;
-
     object-fit:cover;
-
     border-radius:8px;
-
     transition:0.3s;
 }
 
@@ -199,18 +178,12 @@ nav a:hover{
 
 .reinaduende a{
     display:inline-block;
-
     background:#111;
     color:#fff;
-
     padding:10px 18px;
-
     border-radius:5px;
-
     text-decoration:none;
-
     font-size:14px;
-
     transition:0.3s;
 }
 
@@ -222,23 +195,17 @@ nav a:hover{
 footer{
     background:#111;
     color:#ccc;
-
     padding:40px 20px;
-
     margin-top:40px;
 }
 
 
 .goldaabajo{
     max-width:1200px;
-
     margin:auto;
-
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit, minmax(220px,1fr));
-
     gap:20px;
 }
 
@@ -324,10 +291,10 @@ footer a:hover{
             Code Craft
         </div>
         <nav>
-            <LI><a href="productos.php">PRODUCTOS</a></LI>
-            <li><a href="horarioatencion.php">HORARIO</a></li>
-            <a href="quienes.php">QUIENES</a>
-            <a href="telefonos .php">TELEFONOS</a>
+        <a href="productos.php">PRODUCTOS</a>
+        <a href="horarioatencion.php">HORARIO</a>
+        <a href="quienes.php">QUIENES</a>
+        <a href="telefonos .php">TELEFONOS</a>
             <section class="dropdown">
                 <a href="#">MAS</a>
                 <div class="dropdown-content">
@@ -356,171 +323,63 @@ footer a:hover{
                     <a href="creacionjugos.php">Creacion de jugos</a>
                 </div>
         </div>
-
     </div>
-
 </section>
-
-
 <section class="sections">
-
-
     <div class="reinaduende">
-
         <img src="combos.jpg" alt="Combos">
-
         <h2>COMBOS</h2>
-
-        <a href="combos.php">
-            COMPRA AHORA
-        </a>
-
+        <a href="combos.php">COMPRA AHORA</a>
     </div>
-
     <div class="reinaduende">
-
         <img src="quienes.png" alt="Quiénes Somos">
-
         <h2>QUIENES SOMOS</h2>
-
-        <a href="quienes.php">
-            MÁS INFORMACIÓN
-        </a>
-
+        <a href="quienes.php">MÁS INFORMACIÓN</a>
     </div>
-
-    <!-- CARD -->
     <div class="reinaduende">
-
         <img src="https://png.pngtree.com/png-vector/20250608/ourmid/pngtree-refreshing-fruit-juices-in-glasses-with-splashes-png-image_16490798.png" alt="Productos Naturales">
-
         <h2>PRODUCTOS NATURALES</h2>
-
-        <a href="productos.php">
-            COMPRAR AHORA
-        </a>
-
+        <a href="productos.php">COMPRAR AHORA</a>
     </div>
-
 </section>
-
 <footer>
-
     <div class="goldaabajo">
         <div>
-
             <h4>NOSOTROS</h4>
-
             <ul>
-
-                <li>
-                    <a href="#">
-                        Nuestra historia
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Nuestra filosofía
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Responsabilidad social
-                    </a>
-                </li>
-
+                <li><a href="#">Nuestra historia</a></li>
+                <li><a href="#">Nuestra filosofía</a></li>
+                <li><a href="#">Responsabilidad social</a></li>
             </ul>
-
         </div>
         <div>
-
             <h4>TIENDA</h4>
-
             <ul>
-
-                <li>
-                    <a href="#">
-                        Programa 7 días
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Dieta líquida de 1 día
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Otros productos
-                    </a>
-                </li>
-
+                <li><a href="#">Programa 7 días</a></li>
+                <li><a href="#">Dieta líquida de 1 día</a></li>
+                <li><a href="#">Otros productos</a></li>
             </ul>
-
         </div>
         <div>
-
             <h4>AYUDA</h4>
-
             <ul>
-
-                <li>
-                    <a href="#">
-                        Contacto
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Preguntas frecuentes
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Términos y condiciones
-                    </a>
-                </li>
-
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
             </ul>
-
         </div>
-
-  
         <div class="subscribe">
-
             <h4>SUSCRÍBETE</h4>
-
-            <p>
-                Recibe nuestras últimas noticias
-            </p>
-
-            <input
-            type="email"
-            placeholder="Tu email...">
-
-            <button>
-                OK
-            </button>
-
-
+            <p>Recibe nuestras últimas noticias</p>
+            <input type="email" placeholder="Tu email...">
+            <button>OK</button>
             <div class="redes-musculoso">
-
                 <a href="#">🌐</a>
-
                 <a href="#">📘</a>
-
                 <a href="#">📸</a>
-
                 <a href="#">📍</a>
-
             </div>
-
         </div>
-
     </div>
 
 </footer>
