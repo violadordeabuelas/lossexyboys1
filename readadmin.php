@@ -301,7 +301,6 @@ section.cuadro{
     <ul>
       <li><a href="productos.html">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="combos.html">COMBOS</a></li>
       <li><a href="quienes.html">QUIENES SOMOS</a></li>
       <li><a href="telefonos .html">TELEFONOS</a></li>
       <li class="dropdown">
