@@ -300,7 +300,7 @@ footer a:hover{
         <nav>
             <a href="#">Inicio</a>
             <a href="#">Categorías</a>
-            <a href="#">Contacto</a>
+            <a href="registro.php">Registrarse</a>
             <a href="#">Jugos</a>
         </nav>
     </header>
@@ -309,7 +309,7 @@ footer a:hover{
         <div class="botones">
             <a href="#">INICIO</a>
             <a href="#">CATEGORÍAS</a>
-            <a href="#">CONTACTO</a>
+            <a href="#">USUARIO</a>
             <a href="#">JUGOS</a>
         </div>
 
