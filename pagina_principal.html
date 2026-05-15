@@ -192,6 +192,122 @@ nav a:hover{
     background:#333;
 }
 
+.bombastic{
+    background:#fafafa;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+
+    display:grid;
+    gap:10px;
+
+    overflow:hidden;
+}
+
+.bombastic img{
+    width:100%;
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.bombastic img:hover{
+    transform:scale(1.05);
+}
+
+.bombastic h2{
+    font-size:22px;
+    font-weight:700;
+}
+
+.bombastic a{
+    display:inline-block;
+
+    background:#111;
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+.bombastic a:hover{
+    background:#333;
+}
+
+.mitch{
+    background:#fafafa;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+
+    display:grid;
+    gap:10px;
+
+    overflow:hidden;
+}
+
+.mitch img{
+    width:100%;
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.mitch img:hover{
+    transform:scale(1.05);
+}
+
+.mitch h2{
+    font-size:22px;
+    font-weight:700;
+}
+
+.mitch a{
+    display:inline-block;
+
+    background:#111;
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+.mitch a:hover{
+    background:#333;
+}
+
 
 footer{
     background:#111;
@@ -321,9 +437,9 @@ footer a:hover{
 <section class="sections">
 
 
-    <div class="reinaduende">
+    <div class="mitch">
 
-        <img src="combos.jpg" alt="Combos">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
 
         <h2>COMBOS</h2>
 
@@ -333,9 +449,11 @@ footer a:hover{
 
     </div>
 
-    <div class="reinaduende">
 
-        <img src="quienes.png" alt="Quiénes Somos">
+
+    <div class="bombastic">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
 
         <h2>QUIENES SOMOS</h2>
 
@@ -347,7 +465,6 @@ footer a:hover{
 
     <!-- CARD -->
     <div class="reinaduende">
-
         <img src="https://png.pngtree.com/png-vector/20250608/ourmid/pngtree-refreshing-fruit-juices-in-glasses-with-splashes-png-image_16490798.png" alt="Productos Naturales">
 
         <h2>PRODUCTOS NATURALES</h2>
@@ -357,6 +474,8 @@ footer a:hover{
         </a>
 
     </div>
+
+
 
 </section>
 
