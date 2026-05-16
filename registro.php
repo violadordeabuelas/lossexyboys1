@@ -225,6 +225,7 @@ font-size: 16px;
     <a href="sexiboys.php">Usuarios</a>
     <a href="creacion.php">Creación de vasos</a>
     <a href="creacionjugos.php">Creación de jugos</a>
+    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
       </ul>

@@ -60,16 +60,20 @@
   .dropdown {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
   background-color: #111;
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .dropdown-content a {
@@ -304,10 +308,11 @@ section.cuadro{
       <li><a href="quienes.html">QUIENES SOMOS</a></li>
       <li><a href="telefonos .html">TELEFONOS</a></li>
       <li class="dropdown">
-  <a href="productos.html">MÁS</a>
+  <a href="#" class="dropbtn">MÁS</a>
   <div class="dropdown-content">
     <a href="ubicacion.html">Ubicación</a>
     <a href="registro.html">Registrarse</a>
+    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>
@@ -330,8 +335,7 @@ section.cuadro{
                   <input type="text" class="use-input" id="nombre" name="nombre" required><br>
 
                   <label for="tele" class="use-label">Teléfono:</label>
-                  <input type="n
-                  um" class="use-input" id="tele" name="tele" required><br>
+                  <input type="number" class="use-input" id="tele" name="tele" required><br>
 
                   <label for="naci" class="use-label">Fecha de nacimiento:</label>
                   <input type="date" class="use-input" id="naci" name="naci" required><br>

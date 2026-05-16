@@ -179,7 +179,6 @@ footer {
     <ul>
       <li><a href="productos.php">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="combos.php">COMBOS</a></li>
       <li><a href="quienes.php">QUIENES SOMOS</a></li>
       <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
@@ -189,6 +188,7 @@ footer {
     <a href="registro.php">Registrarse</a>
     <a href="creacion.php">Creacion de vasos</a>
     <a href="creacionjugos.php">Creacion de jugos</a>
+    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>

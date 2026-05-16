@@ -1,16 +1,25 @@
+<?php
+$jugo = $_GET['jugo'];
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  header {
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #064e3b;
+  color: #e6ffee;
+}
+
+ header {
     background: #111;
     color: #fff;
     padding: 12px 40px;
@@ -36,104 +45,7 @@
   nav a:hover {
     color: #5eff6ce5;
   }
-  .pepe {
-    background: #f6f6f6;
-    padding: 60px 20px;
-    display: grid;
-    justify-content: center;
-  }
-  .pepe-contenido {
-    max-width: 1100px;
-    display: grid;
-    gap: 20px;
-  }
-  .pepe h1 {
-    font-size: 46px;
-    font-weight: 800;
-  }
-  .pepe h1 span {
-    color: #111;
-  }
-  .pepep p {
-    font-size: 22px;
-    color: #555;
-  }
-  .pepe-img img {
-    width: 1000px;
-    height: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  .pepe-img img:hover {
-    transform: scale(1.03);
-  }
-.main-content {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.title-section {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.title-section h1 {
-font-size: 3rem;
-color: #333;
-margin-bottom: 20px;
-margin-bottom: 20px;
-font-family: sans-serif;
-}
-
-.title-section p {
-      font-size: 30px;
-      text-align: justify;
-      line-height: 1.6;
-      color: #444;
-      font-family: "Times New Roman", Times, serif;
-}
-
-.info-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  background: #f0fff4;
-}
-
-.card h2 {
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      font-family: 'Roboto', sans-serif;
-    }
-
-.card p {
-      font-size: 20px;
-      line-height: 1.6;
-      text-align: justify;
-      color: #444;
-      font-family: "Times New Roman", Times, serif;
-    }
-
-
-
-  footer {
+footer {
     background: #111;
     color: #ccc;
     padding: 40px 20px;
@@ -190,7 +102,80 @@ font-family: sans-serif;
   .subscribe button:hover {
     background: #3cffce;
   }
-  .dropdown {
+main.main {
+  flex: 1;               
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.form-box{
+  background: linear-gradient(180deg,#16a34a 0%, #059669 100%); 
+  padding: 28px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.form-box h1{
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.form-grid{
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+label{
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+input[type="text"],
+input[type="number"],
+select{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="number"],
+select{
+  background: rgba(255,255,255,0.95);
+  color: #063225;
+}
+
+.form-actions{
+  display:flex;
+  justify-content:center;
+  margin-top: 8px;
+}
+input[type="submit"]{
+  background: #064e3b;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+}
+input[type="submit"]:hover{
+  background: #05392e;
+}
+.dropdown {
   position: relative;
   display: inline-block;
 }
@@ -223,7 +208,7 @@ font-family: sans-serif;
     </style>
 </head>
 <body>
-    <header>
+<header>
   <a href="pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
@@ -231,6 +216,7 @@ font-family: sans-serif;
     <ul>
       <li><a href="productos.php">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="combos.php">COMBOS</a></li>
       <li><a href="quienes.php">QUIENES SOMOS</a></li>
       <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
@@ -240,36 +226,53 @@ font-family: sans-serif;
     <a href="registro.php">Registrarse</a>
     <a href="creacion.php">Creacion de vasos</a>
     <a href="creacionjugos.php">Creacion de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>
   </nav>
 </header>
 
-<div class="main-content">
-  <div class="title-section">
-    <h1>¿Quiénes somos?</h1>
-    <p>Somos Boomble, un emprendimiento vibrante y consciente, nacido de la pasión por la vida saludable y el profundo respeto por nuestro planeta. En Boomble, creemos que el bienestar personal no debe estar reñido con la sostenibilidad. Por eso, hemos fusionado lo mejor de la naturaleza: deliciosos jugos 100% naturales y una propuesta de valor única y ecológica que marca la diferencia.</p>
-  </div>
-
-  <div class="info-cards">
-    <div class="card">
-      <h2>Nuestra misión</h2>
-      <p>Refrescar y Nutrir: Ofrecer a nuestros clientes una experiencia de sabor inigualable con jugos hechos al momento, utilizando frutas y verduras frescas de la más alta calidad, impulsando así hábitos de vida más saludables.
-      <br>
-      Liderar la Sostenibilidad: Fomentar el consumo responsable al servir nuestros jugos exclusivamente en vasos reutilizables de bambú y tutuma , eliminando el plástico de un solo uso y promoviendo la reutilización y el valor de los materiales naturales y artesanales. Buscamos ser un agente de cambio que inspire a otros a adoptar prácticas ecológicas.</p>
-    </div>
-
-    <div class="card">
-      <h2>Nuestra visión</h2>
-      <p>Visualizamos a Boomble como la marca líder en la venta de jugos naturales reconocida por su compromiso inquebrantable con la ecología y la innovación sostenible. Queremos ser el estándar de cómo un negocio de alimentos y bebidas puede operar con un impacto ambiental positivo, expandiendo nuestra propuesta de "Jugos en tu Vaso Natural" a más comunidades y demostrando que es posible tener un negocio rentable que sea amable con la Tierra. Buscamos revalorizar el bambú y la tutuma como alternativas cotidianas y duraderas al plástico.</p>
-    </div>
-  </div>
-</div>
 
 
-<footer>
+
+
+    <main class="main">
+      <div class="form-box">
+        <h1>¿Quieres comprar?</h1>
+        <form action="insert_produc.php" method="post" class="form-grid">
+          <div>
+            <label for="codigo">Código</label>
+            <input id="codigo" type="text" name="codigo" required value="BB-">
+          </div>
+
+          <div>
+            <label for="producto">Producto</label>
+            <input id="producto" type="text" name="producto" required value="<?php echo $jugo; ?>" readonly>
+          </div>
+          <div>
+            <label for="vasos">Vasos</label>
+            <select id="vasos" name="vasos" required>
+              <option value="tutuma">tutuma</option>
+              <option value="bambu">bambu</option>
+              <option value="vasos de vidrio">vasos de vidrio</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="cantidad">Cantidad</label>
+            <input id="cantidad" type="number" name="cantidad" min="1" max="10" required>
+          </div>
+
+          <div class="form-actions">
+            <input type="submit" value="Enviar">
+          </div>
+        </form>
+      </div>
+    </main>
+    
+    
+    
+    <footer>
   <div class="goldaabajo">
     <div>
       <h4>NOSOTROS</h4>

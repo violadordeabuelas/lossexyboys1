@@ -180,21 +180,23 @@ font-size: 25px;
 </head>
 <body>
     <header>
-  <a href="pagina_principal.html">
+  <a href="pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
-      <li><a href="productos.html">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="combos.html">COMBOS</a></li>
-      <li><a href="quienes.html">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .html">TELEFONOS</a></li>
+      <li><a href="productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
-  <a href="productos.html">MÁS</a>
+  <a href="productos.php">MÁS</a>
   <div class="dropdown-content">
-    <a href="ubicacion.html">Ubicación</a>
-    <a href="registro.html">Registrarse</a>
+    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
+    <a href="registro.php">Registrarse</a>
+    <a href="creacion.php">Creacion de vasos</a>
+    <a href="creacionjugos.php">Creacion de jugos</a>
+    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>

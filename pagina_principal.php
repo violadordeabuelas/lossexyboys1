@@ -308,14 +308,12 @@ nav a:hover{
     background:#333;
 }
 
-
 footer{
     background:#111;
     color:#ccc;
     padding:40px 20px;
     margin-top:40px;
 }
-
 
 .goldaabajo{
     max-width:1200px;
@@ -325,7 +323,6 @@ footer{
     repeat(auto-fit, minmax(220px,1fr));
     gap:20px;
 }
-
 
 footer h4{
     color:#fff;
@@ -366,30 +363,20 @@ footer a:hover{
 
 .subscribe input{
     padding:8px;
-
     border:none;
-
     border-radius:4px;
-
     width:80%;
 }
 
 .subscribe button{
     background:#3cff46;
-
     border:none;
-
     color:white;
-
     padding:8px 15px;
-
     border-radius:4px;
-
     cursor:pointer;
-
     transition:0.3s;
 }
-
 .subscribe button:hover{
     background:#3cffce;
 }
@@ -419,6 +406,7 @@ footer a:hover{
                     <a href="registro.php">Registrarse</a>
                     <a href="creacion.php">Creacion de vasos</a>
                     <a href="creacionjugos.php">Creacion de jugos</a>
+                    <a href="adminbueno.php">Panel de Administración</a>
                 </div>
 
             </section>
@@ -439,34 +427,18 @@ footer a:hover{
                     <a href="creacion.php">Creacion de vasos</a>
                     <a href="creacionjugos.php">Creacion de jugos</a>
                 </div>
+            </section>
         </div>
     </div>
 </section>
 <section class="sections">
-<<<<<<< HEAD:pagina_principal.html
-
-
-    <div class="mitch">
-
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
-
-=======
     <div class="reinaduende">
-        <img src="combos.jpg" alt="Combos">
->>>>>>> cab3d82f17cc97705daa70d21f4e8c98b0f852d4:pagina_principal.php
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
         <h2>COMBOS</h2>
         <a href="combos.php">COMPRA AHORA</a>
     </div>
-<<<<<<< HEAD:pagina_principal.html
-
-    <div class="bombastic">
-
-        <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
-
-=======
     <div class="reinaduende">
-        <img src="quienes.png" alt="Quiénes Somos">
->>>>>>> cab3d82f17cc97705daa70d21f4e8c98b0f852d4:pagina_principal.php
+        <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
         <h2>QUIENES SOMOS</h2>
         <a href="quienes.php">MÁS INFORMACIÓN</a>
     </div>
