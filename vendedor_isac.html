@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -71,7 +72,6 @@
   display: block;
 }
 section.cuadro{
-    width: 99%;
     margin: 10px;
     display: grid;
     grid-template-columns: 100%;
@@ -79,7 +79,7 @@ section.cuadro{
     grid-template-areas:
       "a"
       "b";
-      gap: 10px;
+    gap: 10px;
   }
     .a {
     grid-area: a;
@@ -91,6 +91,10 @@ section.cuadro{
     grid-template-areas: 
     "i d"
     "i n";
+  }
+  .a img{
+    border-radius: 100%;
+    width: 250px;
   }
     .b {
     grid-area: b;
@@ -124,10 +128,6 @@ section.cuadro{
   .modal {
     inset: 0;
     margin: auto;
-    width: 300px;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
   }
   .botoncito { 
   padding: 10px 20px;
@@ -136,14 +136,12 @@ section.cuadro{
   border: 1px solid #4CAF50;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px ;
-
+  
   }
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
     background-color: transparent;
-    border:transparent
-
+    border: transparent;
   }
     footer {
     background: #111;
@@ -151,38 +149,6 @@ section.cuadro{
     padding: 40px 20px;
     margin-top: 40px;
   }
-  .isac{
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    align-items: center;
-  }
-  .d{
-    font-size: 100px;
-    grid-area: d;
-  }
-  .bot{
-    padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: 1px solid #4CAF50;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 40px ;
-  font-size: 50px;
-  transition: transform 1s, box-shadow 1s;
-  transform: translateY(4px);
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-  }
-  .info{
-    grid-area: n;
-    display: flex;
-    display:inline-block;
-    justify-content: center;
-    top: 200px;
-    left: 200px;
-  }
-
   .goldaabajo {
     max-width: 1200px;
     margin: auto;
@@ -234,7 +200,11 @@ section.cuadro{
   .subscribe button:hover {
     background: #3cffce;
   }
-  
+
+  .d{
+    font-size: 100px;
+    grid-area: d;
+  }
     </style>
 </head>
 <body>
@@ -260,71 +230,66 @@ section.cuadro{
   </nav>
 </header>
     <section class="cuadro">
-        <div class="a"><img src="Isac.png" alt="pep " class="isac" >
-          <nav>
-            <h1 class="d">ADMINISTRADOR</h1>
+         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
+            <nav>
+            <h1 class="d">VENDEDOR</h1>
           </nav>
-          <nav class="info">
-          
-            <button class="bot">AÑADIR</button>
-            <button class="bot">EDITAR</button>
-            <button class="bot">ELIMINAR</button>
-          </nav>
-          
         </div>
+
         <div class="b">
             <table>
                 <tr>
-                    <th>USUARIO</th>
-                    <th>CORREO</th>
-                    <th>CONTRAÑESA</th>
-                    <th>REPORTES</th>
-                    <th>TIPO</th>
+                    <th>Clientes</th>
+                    <th>Productos</th>
+                    <th>Gestion de pedidos</th>
+                    <th>Registro de venata</th>
+                    <th>Precio de todo el pedido</th>
                 </tr>
                 <tr>
-                    <td><button class="pan" id="pan">Pantera</button></td>
-                    <td>isacCaste45@gmail.com</td>
-                    <td>******</td>
-                    <td>dejer ver</td>
-                    <td>administrador</td>
+                    <td><button class="pan" id="pan">Fabricio</button></td>
+                    <td>Jugo de horvhta (baso de Bambu)</td>
+                    <td>En proceso de producccion</td>
+                    <td>Pendiente</td>
+                    <td>5 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="char" id="char">C Char</button></td>
-                    <td>leonelVilla34@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar botones</td>
-                    <td>lider</td>
+                    <td><button class="char" id="char">Jesenia</button></td>
+                    <td>Agua de jamaica (en Tutuma)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Realizado</td>
+                    <td>3 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="joqui" id="joqui">C joqui</button></td>
-                    <td>Camargogarnica@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar productos</td>
-                    <td>probador</td>
+                    <td><button class="joqui" id="joqui">Fabiana</button></td>
+                    <td>Moconchinchi (baso de Bambu)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Pendiente</td>
+                    <td>5 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="bomm" id="bomm">C Bomm</button></td>
-                    <td>hazielduzan@gmail.com</td>
-                    <td>******</td>
-                    <td>hacer CRUD</td>
-                    <td>Data base</td>
+                    <td><button class="bomm" id="bomm">Andre</button></td>
+                    <td>Limonada (en Tutuma)</td>
+                    <td>En proceso de produccion</td>
+                    <td>Pendiente</td>
+                    <td>3 Bs</td>
                 </tr>
                 <tr>
-                    <td><button class="panoch" id="panoch">panoch</button></td>
-                    <td>mateosalazar@gmail.com</td>
-                    <td>******</td>
-                    <td>Hacer Pagina</td>
-                    <td>pagina</td>
+                    <td><button class="panoch" id="panoch">Agustin</button></td>
+                    <td>Jugo de coco (baso de Bambu)</td>
+                    <td>Entregado al cliente</td>
+                    <td>Realizado</td>
+                    <td>5 Bs</td>
                 </tr>
             </table>
         </div>
         <dialog class="modal">
-            <center><img src='isac.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center>
-            <center><h2>Pantera</h2><br></center>
+            <h2>Pantera</h2><br>
             <p>Nombre: Isac Castellon</p>
             <p>Correo: isacCaste45@gmail.com</p>
-            <form  method='dialog'>
-                <center><button class='botoncito'>cerrar</button></center>
+            <p>Telefono: 54980909</p>
+            <p>Direccion: Avenida America</p>
+            <form  method="dialog">
+                <button class="pan">cerrar</button>
             </form>
         </dialog>
     </section>
@@ -378,23 +343,23 @@ section.cuadro{
 
         var modal = document.querySelector(".modal");
         pan.addEventListener("click", function() {
-            modal.innerHTML ="<center><img src='isac.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>Pantera</h2><br></center><p>Nombre: Isac Castellon</p><p>Correo: isacCaste45@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>Fabricio</h2><p>Nombre: Fabricio Calero</p><p>Correo: fricac@gmail.com</p><p>Telefono: 54980909</p><p>Direccion: Avenida America</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         char.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='leo.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C Char</h2><br></center><p>Nombre: Leonel Villarrouel</p><p>Correo: leonelVilla34@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>C Jesenia</h2><p>Nombre: Jesenia Copa</p><p>Correo: Jesscop34@gmail.com</p><p>Telefono: 98679376</p><p>Direccion: Avenida Libertador</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         joqui.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='fer.png' alt='joqui' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C joqui</h2><br></center><p>Nombre: Fernando Camargo</p><p>Correo: Camargogarnica@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2> Fabiana</h2><p>Nombre: Fabiana Herrera</p><p>Correo: Fabiherreara@gmail.com</p><p>Telefono: 43251636</p><p>Direccion: Avenida Beingjin</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         bomm.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='malaga.png' alt='bomm' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C Bomm</h2><br></center><p>Nombre: Alexander MAlaga</p><p>Correo: hazielduzan@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2> Andre</h2><p>Nombre: Andre Aramayo</p><p>Correo: bradpid@gmail.com</p><p>Telefono: 78436245</p><p>Direccion: Avenida Villazon</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
         panoch.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='mateo.png' alt='panoch' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>panoch</h2><br></center><p>Nombre: Mateo Salazar</p><p>Correo: mateosalazar@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
+            modal.innerHTML = "<h2>Agustin</h2><p>Nombre: Agustin Veizaga</p><p>Correo: Agusmichi@gmail.com</p><p>Telefono: 63894234</p><p>Direccion: Avenida Balco Galindo</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
             modal.showModal();
         });
     </script>

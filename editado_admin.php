@@ -12,7 +12,7 @@
         echo "si te conectaste ". "<br>";
     }
 
-    $id=NULL;
+    $id=$_POST['id'];
     $usuario=$_POST['usuario'];
     $nombre=$_POST['nombre'];
     $tele=$_POST['tele'];
@@ -23,7 +23,7 @@
     $tipo=$_POST['tipo'];
     $dire=$_POST['dire'];
 
-    $sql="INSERT INTO adminis (id,usuario,nombre,tele,naci,correo,contraseña,reportes,tipo,dire) VALUES ('$id','$usuario','$nombre','$tele','$naci','$correo','$contraseña','$reportes','$tipo','$dire')";
+    $sql="UPDATE adminis SET usuario='$usuario', nombre='$nombre', tele='$tele', naci='$naci', correo='$correo', contraseña='$contraseña', reportes='$reportes', tipo='$tipo', dire='$dire' WHERE id='$id'";
     $query= mysqli_query($conn,$sql);
 
     if($query){

@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horario de Atención
+Boomble</title>
+<style>
     * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-  header {
+body {
+font-family: Arial, sans-serif;
+color: #6eb3f9ff;
+margin: 0;
+background-image: url(https://www.prensalibre.com/wp-content/uploads/2025/05/Jugos-naturales-01.jpg?quality=52);
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+header {
     background: #111;
     color: #fff;
     padding: 12px 40px;
@@ -21,17 +33,13 @@
   header img.logo {
     height: 100px;
     width: 100px;
-    transition: transform 0.3s ease;
-  }
-  header img.logo:hover {
-    transform: scale(1.1);
   }
   nav ul {
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
     list-style: none;
-    gap: 20px;
+    gap: 70px;
   }
   nav a {
     color: #fff;
@@ -40,72 +48,47 @@
   nav a:hover {
     color: #5eff6ce5;
   }
-  .dropdown {
-  position: relative;
-  display: inline-block;
+
+
+h1 {
+text-align: center;
+color: #5eff6ce5;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #111;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-.dropdown-content a {
-  color: #fff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #333;
-  color: #5eff6ce5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-form {
-background-color: white;
-max-width: 600px;
-margin: auto;
-padding: 20px;
-border-radius: 8px;
-}
-label {
-display: block;
-margin-top: 15px;
-font-weight: bold;
-}
-input, select {
-width: 99%;
-padding: 10px;
-margin-top: 5px;
-border: 1px solid black;
-border-radius: 4px;
-}
-.bot {
-background-color: #8df491;
-color: black;
-padding: 10px 20px;
-border: none;
-margin-top: 20px;
+table {
 width: 100%;
-font-size: 25px;
+margin-top: 20px;
 }
-    footer {
+.container {
+max-width: 500px;
+margin: 40px auto;
+background-color: #ffffff;
+padding: 30px;
+border-radius: 10px;
+flex: 1;
+
+}
+th, td {
+padding: 12px;
+text-align: left;
+}
+
+th {
+background-color: #5eff6ce5;
+color: rgb(255, 255, 255);
+}
+
+tr:nth-child(even) {
+background-color: #c5fff5;
+}
+footer {
     background: #111;
     color: #ccc;
     padding: 40px 20px;
     margin-top: 40px;
   }
-  .goldaabajo {
-    max-width: 1200px;
+.goldaabajo {
+    max-width: 1200;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -153,52 +136,114 @@ font-size: 25px;
     cursor: pointer;
   }
   .subscribe button:hover {
-    background: #3cffce;
+    background: rgba(10, 243, 185, 1)e5;
   }
-    </style>   
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5eff6ce5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
 </head>
 <body>
-    <header>
-  <a href="pagina_principal.html">
+<header>
+  <a href="pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
-      <li><a href="productos.html">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="combos.html">COMBOS</a></li>
-      <li><a href="quienes.html">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .html">TELEFONOS</a></li>
+      <li><a href="productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="combos.php">COMBOS</a></li>
+      <li><a href="quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
-  <a href="productos.html">MÁS</a>
+  <a href="productos.php">MÁS</a>
   <div class="dropdown-content">
-    <a href="ubicacion.html">Ubicación</a>
-    <a href="registro.html">Registrarse</a>
+    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
+    <a href="registro.php">Registrarse</a>
+    <a href="creacion.php">Creacion de vasos</a>
+    <a href="creacionjugos.php">Creacion de jugos</a>
   </div>
 </li>
     </ul>
   </nav>
 </header>
-  <form action="añadir.php" method="post" class="use">
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario" required><br>
 
-    <label for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo" required><br>
+<section class="container">
+<h1>Horario de Atención
+Boomble</h1>
+<table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Horario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lunes</td>
+<td>2:00 PM
+4:00 PM</td>
+</tr>
+<tr>
+<td>Martes</td>
+<td>2:00 PM
+4:00 PM</td>
+</tr>
+<tr>
+<td>Miércoles</td>
+<td>2:00 PM
+4:00 PM</td>
+</tr>
+<tr>
+<td>Jueves</td>
+<td>2:00 PM
+4:00 PM</td>
+</tr>
+<tr>
+<td>Viernes</td>
+<td>2:00 PM
+4:00 PM</td>
+</tr>
+<tr>
+<td>Sábado</td>
+<td>Cerrado</td>
+</tr>
+<tr>
+<td>Domingo</td>
+<td>Cerrado</td>
+</tr>
+</tbody>
+</table>
+</section>
 
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña" required><br>
-
-    <label for="tipo">Tipo:</label>
-    <input type="text" id="tipo" name="tipo" required><br>
-    
-    <input type="submit" value="Registrar" class="bot">
-    
-  </form>
-
-
-
-  <footer>
+<footer>
   <div class="goldaabajo">
     <div>
       <h4>NOSOTROS</h4>
