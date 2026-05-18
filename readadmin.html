@@ -1,3 +1,20 @@
+<?php
+    $servidor="localhost";
+    $usuario="root";
+    $contraseña="";
+    $nombreBD="admin1";
+
+    $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
+    if($conn -> connect_error){
+        echo "no te conectaste ";
+    }
+    else{
+        echo "si te conectaste ". "<br>";
+    }
+    $sql= "SELECT * FROM adminis";
+    $query = $conn->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,6 +146,14 @@ section.cuadro{
     border: none;
     border-radius: 10px;
   }
+  .modaluse {
+    inset: 0;
+    margin: auto;
+    width: 400px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+  }
   .botoncito { 
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -137,13 +162,26 @@ section.cuadro{
   border-radius: 5px;
   cursor: pointer;
   margin: 20px ;
-
+  
+  }
+  .edi {
+    padding: 6px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .eli {
+    padding: 6px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
   }
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
     background-color: transparent;
-    border:transparent
-
+    border: transparent;
   }
     footer {
     background: #111;
@@ -161,6 +199,25 @@ section.cuadro{
     font-size: 100px;
     grid-area: d;
   }
+  .use {
+  background-color: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  }
+  .use-label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  }
+  .use-input {
+  width: 99%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  }
   .bot{
     padding: 10px 20px;
   background-color: #4CAF50;
@@ -170,9 +227,6 @@ section.cuadro{
   cursor: pointer;
   margin: 40px ;
   font-size: 50px;
-  transition: transform 1s, box-shadow 1s;
-  transform: translateY(4px);
-  box-shadow: 0 0 0 rgba(0,0,0,0);
   }
   .info{
     grid-area: n;
@@ -234,7 +288,6 @@ section.cuadro{
   .subscribe button:hover {
     background: #3cffce;
   }
-  
     </style>
 </head>
 <body>
@@ -246,7 +299,6 @@ section.cuadro{
     <ul>
       <li><a href="productos.html">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="combos.html">COMBOS</a></li>
       <li><a href="quienes.html">QUIENES SOMOS</a></li>
       <li><a href="telefonos .html">TELEFONOS</a></li>
       <li class="dropdown">
@@ -266,9 +318,42 @@ section.cuadro{
           </nav>
           <nav class="info">
           
-            <button class="bot">AÑADIR</button>
-            <button class="bot">EDITAR</button>
-            <button class="bot">ELIMINAR</button>
+            <button class="bot" id="añadir">AÑADIR</button>
+            <dialog id="modalAñadir" class="modaluse">
+              <form action="insertar_admin.php" method="post" class="use">
+                  <label for="usuario" class="use-label">Usuario:</label>
+                  <input type="text" class="use-input" id="usuario" name="usuario" required><br>
+
+                  <label for="nombre" class="use-label">Nombre:</label>
+                  <input type="text" class="use-input" id="nombre" name="nombre" required><br>
+
+                  <label for="tele" class="use-label">Teléfono:</label>
+                  <input type="n
+                  um" class="use-input" id="tele" name="tele" required><br>
+
+                  <label for="naci" class="use-label">Fecha de nacimiento:</label>
+                  <input type="date" class="use-input" id="naci" name="naci" required><br>
+
+                  <label for="correo" class="use-label">Correo:</label>
+                  <input type="email" class="use-input" id="correo" name="correo" required><br>
+
+                  <label for="contraseña" class="use-label">Contraseña:</label>
+                  <input type="password" class="use-input" id="contraseña" name="contraseña" required><br>
+
+                  <label for="reportes" class="use-label">Reportes:</label>
+                  <input type="text" class="use-input" id="reportes" name="reportes" required><br>
+
+                  <label for="tipo" class="use-label">Genero:</label>
+                  <input type="text" class="use-input" id="tipo" name="tipo" required><br>
+
+                  <label for="dire" class="use-label">Dirección:</label>
+                  <input type="text" class="use-input" id="dire" name="dire" required><br>
+    
+                <input type="submit" value="Registrar" class="bot">
+    
+              </form>
+            </dialog>
+            
           </nav>
           
         </div>
@@ -281,52 +366,34 @@ section.cuadro{
                     <th>REPORTES</th>
                     <th>TIPO</th>
                 </tr>
-                <tr>
-                    <td><button class="pan" id="pan">Pantera</button></td>
-                    <td>isacCaste45@gmail.com</td>
-                    <td>******</td>
-                    <td>dejer ver</td>
-                    <td>administrador</td>
-                </tr>
-                <tr>
-                    <td><button class="char" id="char">C Char</button></td>
-                    <td>leonelVilla34@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar botones</td>
-                    <td>lider</td>
-                </tr>
-                <tr>
-                    <td><button class="joqui" id="joqui">C joqui</button></td>
-                    <td>Camargogarnica@gmail.com</td>
-                    <td>******</td>
-                    <td>cambiar productos</td>
-                    <td>probador</td>
-                </tr>
-                <tr>
-                    <td><button class="bomm" id="bomm">C Bomm</button></td>
-                    <td>hazielduzan@gmail.com</td>
-                    <td>******</td>
-                    <td>hacer CRUD</td>
-                    <td>Data base</td>
-                </tr>
-                <tr>
-                    <td><button class="panoch" id="panoch">panoch</button></td>
-                    <td>mateosalazar@gmail.com</td>
-                    <td>******</td>
-                    <td>Hacer Pagina</td>
-                    <td>pagina</td>
-                </tr>
+                <tbody>
+                <?php $i = 0; while($row = mysqli_fetch_assoc($query)):?>
+                  <tr>
+                    <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['usuario']; ?></button></td>
+                    <td><?php echo $row['correo']; ?></td>
+                    <td><?php echo $row['contraseña']; ?></td>
+                    <td><?php echo $row['reportes']; ?></td>
+                    <td><?php echo $row['tipo']; ?></td>
+                    <td>
+                      <a class="edi" href="editar_admin.php?id=<?php echo $row['id']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['id']; ?>">ELIMINAR</a>
+                    </td>
+                  </tr>
+                  <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
+                    <center><h2><?php echo $row['usuario']?></h2><br></center>
+                    <p>Nombre:<?php echo $row['nombre']?></p>
+                    <p>Telefono:<?php echo $row['tele']?></p>
+                    <p>Fecha de nacimiento: <?php echo $row['naci']?></p>
+                    <p>Correo: <?php echo $row['correo']?></p>
+                    <p>Direccion:<?php echo $row['dire']?></p>
+                    <form  method='dialog'>
+                      <center><button class='botoncito'>cerrar</button></center>
+                    </form>
+                  </dialog>
+                <?php $i++; endwhile;?>
+                </tbody>
             </table>
         </div>
-        <dialog class="modal">
-            <center><img src='isac.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center>
-            <center><h2>Pantera</h2><br></center>
-            <p>Nombre: Isac Castellon</p>
-            <p>Correo: isacCaste45@gmail.com</p>
-            <form  method='dialog'>
-                <center><button class='botoncito'>cerrar</button></center>
-            </form>
-        </dialog>
     </section>
     <footer>
   <div class="goldaabajo">
@@ -368,35 +435,24 @@ section.cuadro{
     </div>
   </div>
 </footer>
+<script>
+        var boton = document.querySelectorAll(".btn-modal");
+        boton.forEach(function(button) {
+            button.addEventListener("click", function() {
+                var index = button.getAttribute("data-index");
+                var modal = document.querySelector(".modaltodo[data-index='" + index + "']");
+                if (modal) {
+                    modal.showModal();
+                }
+            });
+        });
 
-    <script>
-        var pan = document.getElementById("pan");
-        var char = document.getElementById("char");
-        var joqui = document.getElementById("joqui");
-        var bomm = document.getElementById("bomm");
-        var panoch = document.getElementById("panoch");
-
-        var modal = document.querySelector(".modal");
-        pan.addEventListener("click", function() {
-            modal.innerHTML ="<center><img src='isac.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>Pantera</h2><br></center><p>Nombre: Isac Castellon</p><p>Correo: isacCaste45@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
-            modal.showModal();
-        });
-        char.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='leo.png' alt='isac' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C Char</h2><br></center><p>Nombre: Leonel Villarrouel</p><p>Correo: leonelVilla34@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
-            modal.showModal();
-        });
-        joqui.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='fer.png' alt='joqui' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C joqui</h2><br></center><p>Nombre: Fernando Camargo</p><p>Correo: Camargogarnica@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
-            modal.showModal();
-        });
-        bomm.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='malaga.png' alt='bomm' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>C Bomm</h2><br></center><p>Nombre: Alexander MAlaga</p><p>Correo: hazielduzan@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
-            modal.showModal();
-        });
-        panoch.addEventListener("click", function() {
-            modal.innerHTML = "<center><img src='mateo.png' alt='panoch' class='isac' style='border-radius: 50%; width: 150px; height: 150px;'><br></center><center><h2>panoch</h2><br></center><p>Nombre: Mateo Salazar</p><p>Correo: mateosalazar@gmail.com</p><form  method='dialog'><center><button class='botoncito'>cerrar</button></center></form>";
-            modal.showModal();
+        var aña = document.getElementById("añadir");
+        var modalAñadir = document.getElementById("modalAñadir");
+        aña.addEventListener("click", function() {
+            modalAñadir.showModal();
         });
     </script>
+
 </body>
 </html>
