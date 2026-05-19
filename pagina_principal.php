@@ -399,17 +399,6 @@ footer a:hover{
         <a href="horarioatencion.php">HORARIO</a>
         <a href="quienes.php">QUIENES</a>
         <a href="telefonos .php">TELEFONOS</a>
-            <section class="dropdown">
-                <a href="#">MAS</a>
-                <div class="dropdown-content">
-                    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-                    <a href="registro.php">Registrarse</a>
-                    <a href="creacion.php">Creacion de vasos</a>
-                    <a href="creacionjugos.php">Creacion de jugos</a>
-                    <a href="adminbueno.php">Panel de Administración</a>
-                </div>
-
-            </section>
         </nav>
     </header>
     <div class="contenido">
@@ -419,23 +408,14 @@ footer a:hover{
             <a href="horarioatencion.php">HORARIA</a>
             <a href="quienes.php">QUIENES</a>
             <a href="telefonos .php">TELEFONOS</a>
-            <section class="dropdown">
-                <a href="#">MAS</a>
-                <div class="dropdown-content">
-                    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-                    <a href="registro.php">Registrarse</a>
-                    <a href="creacion.php">Creacion de vasos</a>
-                    <a href="creacionjugos.php">Creacion de jugos</a>
-                </div>
-            </section>
         </div>
     </div>
 </section>
 <section class="sections">
     <div class="reinaduende">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
-        <h2>COMBOS</h2>
-        <a href="combos.php">COMPRA AHORA</a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Vendedor">
+        <h2>Vendedor</h2>
+        <a href="vendedor.php">vendedor</a>
     </div>
     <div class="reinaduende">
         <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
