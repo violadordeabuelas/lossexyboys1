@@ -327,7 +327,7 @@ section.cuadro{
           
             <button class="bot" id="añadir">AÑADIR</button>
             <dialog id="modalAñadir" class="modaluse">
-              <form action="insertar_vendedor.php" method="post" class="use">
+              <form action="insert_vendedor.php" method="post" class="use">
                   <label for="usuario" class="use-label">Usuario:</label>
                   <input type="text" class="use-input" id="usuario" name="usuario" required><br>
 
@@ -338,7 +338,7 @@ section.cuadro{
                   <input type="number" class="use-input" id="cantidad" name="cantidad" required><br>
 
                   <label for="procio" class="use-label">Precio:</label>
-                  <input type="date" class="use-input" id="precio" name="precio" required><br>
+                  <input type="number" class="use-input" id="precio" name="precio" required><br>
 
                   <label for="tipo" class="use-label">Tipo:</label>
                   <input type="text" class="use-input" id="tipo" name="tipo" required><br>

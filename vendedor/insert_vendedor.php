@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin1";
+    $nombreBD="admin2";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -13,12 +13,13 @@
     }
 
     $codigo=NULL;
+    $usuario=$_POST['usuario']
     $nombrepro=$_POST['nombrepro'];
     $precio=$_POST['precio'];
     $cantidad=$_POST['cantidad'];
     $tipo=$_POST['tipo'];
 
-    $sql="INSERT INTO produc (codigo, nombrepro, precio, cantidad, tipo) VALUES ('$codigo', '$nombrepro', '$precio', '$cantidad','$tipo')";
+    $sql="INSERT INTO produc (usuario, codigo, nombrepro, precio, cantidad, tipo) VALUES ('$usuario', '$codigo', '$nombrepro', '$precio', '$cantidad','$tipo')";
     $query= mysqli_query($conn,$sql);
 
     if($query){
