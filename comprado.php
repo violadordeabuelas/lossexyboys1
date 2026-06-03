@@ -17,6 +17,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    
   }
   header img.logo {
     height: 100px;
