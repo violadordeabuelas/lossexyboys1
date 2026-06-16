@@ -9,7 +9,7 @@
     <?php 
     session_start();
     ?>
-    <h1>Bienvenido <?php echo $_SESSION['nom']. $_SESSION['edad'];?></h1>
+    <h1>Bienvenido <?php echo $_SESSION['usuario']. $_SESSION['edad'];?></h1>
     <a href="cerrar1.php">cerrar sesion</a>
 </body>
 </html>

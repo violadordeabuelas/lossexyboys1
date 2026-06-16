@@ -1,59 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php 
+<?php 
     session_start();
-    $nom=$_POST['usuario'];
-    $contra=$_POST['pass'];
-    echo $nom;
-    echo $contra;
-    if($nom=="Leo"&& $contra=="123"){
-        $_SESSION['nom']="leo";
-        $_SESSION['edad']="18";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
- if($nom=="Leo"&& $contra=="123"){
-        $_SESSION['nom']="leo";
-        $_SESSION['edad']="18";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
-     if($nom=="Alexander"&& $contra=="123"){
-        $_SESSION['nom']="Alexander";
-        $_SESSION['edad']="17";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
-     if($nom=="Isac"&& $contra=="123"){
-        $_SESSION['nom']="Isac";
-        $_SESSION['edad']="17";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
-     if($nom=="Mateo"&& $contra=="123"){
-        $_SESSION['nom']="Mateo";
-        $_SESSION['edad']="17";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
-     if($nom=="Fernando"&& $contra=="123"){
-        $_SESSION['nom']="Fernando";
-        $_SESSION['edad']="17";
-        header("Location:dos.php");
-    }else{
-        header("Location:maquetacion.php");
-    }
-    ?>
-</body>
-</html>
+    $usuario=$_POST['usuario'];
+    $pass=$_POST['pass'];
+    echo $usuario;
+    echo $pass;
+
+if ($usuario == "Leo" && $pass == "123") {
+    $_SESSION['usuario'] = "Leo";
+    $_SESSION['edad'] = "18";
+    $acceso_valido = true;
+    header("Location:../adminbueno.php"); 
+    exit();
+} 
+elseif ($usuario == "Alexander" && $pass == "123") {
+    $_SESSION['usuario'] = "Alexander";
+    $_SESSION['edad'] = "17";
+    $acceso_valido = true;
+    header("../adminbueno.php");
+    exit();
+} 
+elseif ($usuario == "Isac" && $pass == "123") {
+    $_SESSION['usuario'] = "Isac";
+    $_SESSION['edad'] = "17";
+    $acceso_valido = true;
+    header("Location:../adminbueno.php");
+    exit();
+} 
+elseif ($usuario == "Mateo" && $pass == "123") {
+    $_SESSION['usuario'] = "Mateo";
+    $_SESSION['edad'] = "17";
+    $acceso_valido = true;
+    header("Location: adminbueno.php");
+    exit();
+} 
+elseif ($usuario == "Fernando" && $pass == "123") {
+    $_SESSION['usuario'] = "Fernando";
+    $_SESSION['edad'] = "17";
+    $acceso_valido = true;
+    header("Location:../adminbueno.php");
+    exit();
+} 
+else {
+    header("Location:maquetacion.php");
+    exit();
+}
+?>
