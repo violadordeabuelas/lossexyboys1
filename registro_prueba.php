@@ -235,7 +235,7 @@ font-size: 16px;
     
 </section>
 <h1>REGISTRATE EN BOOMBLE</h1>
-<form action="sesiones2026/bdvali.php" method="post">
+<form action="sesiones2026/uno.php" method="post">
 <label for="usuario">USUARIO:</label>
 <input type="text" id="usuario" name="usuario" required>
 <label for="pass">CONTRASEÑA:</label>
